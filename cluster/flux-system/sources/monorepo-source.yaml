@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: testkube-tests
+  name: monorepo-source
   namespace: flux-system
 spec:
   interval: 30s
