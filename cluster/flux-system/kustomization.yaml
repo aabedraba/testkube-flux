@@ -4,3 +4,4 @@ resources:
 - gotk-components.yaml
 - gotk-sync.yaml
 - repositories/monorepo-source.yaml
+- repositories/testkube-helm.yaml
