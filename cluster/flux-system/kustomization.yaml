@@ -3,5 +3,8 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-- repositories
-- controllers
+- repositories/monorepo-git.yaml
+- repositories/testkube-helm.yaml
+- controllers/testkube-helm-release.yaml
+- controllers/testkube-kustomize-controller.yaml
+- controllers/nodejs-kustomize-controller.yaml
