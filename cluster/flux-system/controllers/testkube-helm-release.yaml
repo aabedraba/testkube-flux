@@ -10,7 +10,7 @@ spec:
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: testkube
+        name: testkube-repository
       version: v1.19.11
   interval: 30s
   releaseName: testkube
