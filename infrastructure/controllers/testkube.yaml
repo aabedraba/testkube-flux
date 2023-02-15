@@ -25,3 +25,5 @@ spec:
       interval: 12h
   releaseName: testkube
   targetNamespace: testkube
+  install: 
+    createNamespace: true
