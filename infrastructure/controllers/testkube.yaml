@@ -1,17 +1,27 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: testkube-repository
+  namespace: flux-system
+spec:
+  interval: 1h
+  url: https://kubeshop.github.io/helm-charts
+---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: testkube-helm-release
   namespace: flux-system
 spec:
+  interval: 60m
   chart:
     spec:
       chart: testkube
-      reconcileStrategy: ChartVersion
+      version: "*"
       sourceRef:
         kind: HelmRepository
         name: testkube-repository
-      version: v1.19.11
-  interval: 30s
+      interval: 12h
   releaseName: testkube
   targetNamespace: testkube

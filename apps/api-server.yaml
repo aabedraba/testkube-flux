@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-server
+  name: api-server
   namespace: default
   labels:
-    app: nodejs-server
+    app: api-server
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodejs-server
+      app: api-server
   template:
     metadata:
       labels:
-        app: nodejs-server
+        app: api-server
     spec:
       containers:
-        - name: nodejs-server
+        - name: api-server
           image: kubeshop/example-api-server:v1.0.0
           ports:
             - containerPort: 3000
@@ -25,11 +25,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodejs-server-svc
+  name: api-server-svc
   namespace: default
 spec:
   selector:
-    app: nodejs-server
+    app: api-server
   ports:
     - port: 3000
       targetPort: 3000
