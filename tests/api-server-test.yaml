@@ -12,5 +12,5 @@ spec:
     variables:
       baseUrl:
         name: baseUrl
-        value: "nodejs-server-svc.default:3000"
+        value: "api-server-svc.default:3000"
         type: basic
